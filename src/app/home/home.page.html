@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Translation App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-grid>
+        <ion-row>
+      <ion-col size="4" offset="4">
+        <img src="../../assets/trad.png" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    <ion-card-title>Select Language</ion-card-title>
+    
+
+    </ion-card-header>
+    <ion-card-content>
+
+      <!-- Dropdown for input language -->
+      <ion-item>
+        <ion-label>Input Language</ion-label>
+        <ion-select [(ngModel)]="inputLanguage" (ionChange)="changeLanguage()">
+          <ion-select-option value="en">English</ion-select-option>
+          <ion-select-option value="fr">Français</ion-select-option>
+          <ion-select-option value="es">Español</ion-select-option>
+          <ion-select-option value="it">italien</ion-select-option>
+          <!-- Add other languages as needed -->
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Text to translate</ion-label>
+        <ion-input [(ngModel)]="textToTranslate" (ionInput)="onTextChange()"></ion-input>
+      </ion-item>
+
+
+      <!-- Dropdown for output language -->
+      <ion-item>
+        <ion-label>Output Language</ion-label>
+        <ion-select [(ngModel)]="outputLanguage" (ionChange)="changeLanguage()">
+          <ion-select-option value="en">English</ion-select-option>
+          <ion-select-option value="fr">Français</ion-select-option>
+          <ion-select-option value="es">Español</ion-select-option>
+          <ion-select-option value="it">italien</ion-select-option>
+          <!-- Add other languages as needed -->
+        </ion-select>
+      </ion-item>
+
+      
+    
+      <!-- Displaying translated text -->
+      <ion-item>
+        <ion-label></ion-label>
+        <ion-text>{{ translatedText }}</ion-text>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
