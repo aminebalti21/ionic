@@ -24,11 +24,11 @@ export class HomePage {
 
   translateText() {
     if (this.textToTranslate) {
-      const url = 'https://translate-plus.p.rapidapi.com/translate'; // URL de l'API
+      const url = 'https://translate-plus.p.rapidapi.com/translate'; 
       const headers = new HttpHeaders({
         'Content-Type': 'application/json',
         'x-rapidapi-host': 'translate-plus.p.rapidapi.com',
-        'x-rapidapi-key': '057a3f844cmshda9daa7db0db43dp1cc3cbjsna0917b111bb8' // Assurez-vous que votre clé est valide
+        'x-rapidapi-key': '057a3f844cmshda9daa7db0db43dp1cc3cbjsna0917b111bb8' 
       });
       
       const body = {

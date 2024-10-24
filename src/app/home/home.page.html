@@ -27,24 +27,28 @@
           <ion-select-option value="en">English</ion-select-option>
           <ion-select-option value="fr">Français</ion-select-option>
           <ion-select-option value="es">Español</ion-select-option>
-          <ion-select-option value="it">italien</ion-select-option>
+          <ion-select-option value="it">Italien</ion-select-option>
+          <ion-select-option value="ar">Arabe</ion-select-option>
+          <ion-select-option value="de">German</ion-select-option>
           <!-- Add other languages as needed -->
         </ion-select>
       </ion-item>
       <ion-item>
-        <ion-label position="floating">Text to translate</ion-label>
+        <ion-label position="floating">Text to Translate</ion-label>
         <ion-input [(ngModel)]="textToTranslate" (ionInput)="onTextChange()"></ion-input>
       </ion-item>
 
 
       <!-- Dropdown for output language -->
       <ion-item>
-        <ion-label>Output Language</ion-label>
+        
         <ion-select [(ngModel)]="outputLanguage" (ionChange)="changeLanguage()">
           <ion-select-option value="en">English</ion-select-option>
           <ion-select-option value="fr">Français</ion-select-option>
           <ion-select-option value="es">Español</ion-select-option>
-          <ion-select-option value="it">italien</ion-select-option>
+          <ion-select-option value="it">Italien</ion-select-option>
+          <ion-select-option value="ar">Arabe</ion-select-option>
+          <ion-select-option value="de">German</ion-select-option>
           <!-- Add other languages as needed -->
         </ion-select>
       </ion-item>
@@ -53,7 +57,7 @@
     
       <!-- Displaying translated text -->
       <ion-item>
-        <ion-label></ion-label>
+        
         <ion-text>{{ translatedText }}</ion-text>
       </ion-item>
 
